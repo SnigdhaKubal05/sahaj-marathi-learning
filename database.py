@@ -234,3 +234,4 @@ def get_sentences_by_category(category):
 
     return data
 
+
