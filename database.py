@@ -109,7 +109,7 @@ def insert_default_data():
         sentences = [
 
             # ============================================
-            # 🏠 घरगुती  →  category = "gharguti"
+            # घरगुती  →  category = "gharguti"
             
             ("तुम्ही कसे आहात?",                      "gharguti"),
             ("मला भूक लागली आहे.",                    "gharguti"),
@@ -129,9 +129,8 @@ def insert_default_data():
             ("घर स्वच्छ कर.",                         "gharguti"),
             ("फोन कुठे आहे?",                         "gharguti"),
 
-
-            #  रुग्णालय category = "hospital"
             # ============================================
+            #  रुग्णालय category = "hospital"    
           
             ("मला डॉक्टरकडे जायचे आहे.",              "hospital"),
             ("माझ्या पोटात दुखत आहे.",                "hospital"),
@@ -234,3 +233,4 @@ def get_sentences_by_category(category):
     conn.close()
 
     return data
+
