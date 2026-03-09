@@ -34,10 +34,15 @@ def _db_needs_reset():
 
 
 def create_tables():
-    # ✅ Auto-delete old DB if schema is outdated
+
+    # Force reset database (temporary fix)
+    if os.path.exists("sahaj.db"):
+        os.remove("sahaj.db")
+
+    # existing logic
     if _db_needs_reset():
         os.remove(DB_NAME)
-        print("⚠️  Old sahaj.db detected — deleted and rebuilding with new schema.")
+        print("⚠️ Old sahaj.db detected — deleted and rebuilding with new schema.")
 
     conn = connect_db()
     cursor = conn.cursor()
